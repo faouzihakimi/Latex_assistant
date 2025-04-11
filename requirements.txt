@@ -1,0 +1,4 @@
+Markdown==3.7
+ollama==0.4.7
+streamlit==1.44.1
+streamlit-markdown==1.1.0
