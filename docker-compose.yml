@@ -1,0 +1,20 @@
+
+services:
+  streamlit:
+    build: ./
+    ports:
+      - "8501:8501"
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=ollama:11434  # Critical for container communication
+
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  ollama_data:
