@@ -1,6 +1,7 @@
 import ollama
 import textwrap
 import re
+import streamlit as st
 
 #Usefull tools------------------------------------------------------------------------------------------------
 

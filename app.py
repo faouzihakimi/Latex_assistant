@@ -87,7 +87,7 @@ with tab2:
 
             if improved_text:
                 st.success("Text improvement complete!")
-                st.text(improved_text, language="latex", height=200)
+                st.text(improved_text, height=200)
         else:
             st.warning("Please enter text to improve")
 
