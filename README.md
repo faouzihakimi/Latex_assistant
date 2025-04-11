@@ -38,15 +38,22 @@ Run the Streamlit app:
 ```
 streamlit run app.py  
 ```  
+Access to the app with this link: http://localhost:8501/
 
-## Docker Deployment (Planned)  
-A Dockerized version will enable containerized execution:  
+## Installation with docker and docker-compose
+
+First run the following command in a terminal (docker must be installed):
+
 ```
-docker build -t latex-assistant .  
-docker run -p 8501:8501 latex-assistant  
-```  
-*Check back soon for Dockerfile availability.*  
+docker compose up --build #if it is the first run
+docker compose up #otherwise
+``` 
+In another terminal (the other one must stay open), run the following command:
 
+```
+docker compose exec ollama ollama pull gemma3:1b
+```
+Access to the app with this link: http://localhost:8501/
 
 ## File Structure  
 ```
