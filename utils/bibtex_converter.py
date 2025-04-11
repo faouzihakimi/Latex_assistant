@@ -1,4 +1,5 @@
 import ollama
+import streamlit as st
 
 def extract_section(text):
     try:
