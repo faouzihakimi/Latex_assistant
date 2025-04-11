@@ -1,4 +1,4 @@
-# LaTeX Writing Assistant 🖋️  
+# Local LaTeX Writing Assistant 🖋️  
 
 **Local LaTeX Writing Assistant** is a Streamlit application designed to streamline LaTeX document creation and enhancement. The app provides three core functionalities, each implemented in separate Python modules within the `utils` directory, and supports deployment via Docker.  
 
@@ -25,6 +25,9 @@
 # Clone repository  
 git clone https://github.com/yourusername/latex-writing-assistant.git  
 cd latex-writing-assistant  
+
+# Install ollama
+More information here : [Ollama](https://ollama.com/)
 
 # Install dependencies  
 pip install -r requirements.txt  
