@@ -1,85 +1,107 @@
-# Local LaTeX Writing Assistant 🖋️  
+# Local LaTeX Writing Assistant 🖋️
 
-**Local LaTeX Writing Assistant** is a Streamlit application designed to streamline LaTeX document creation and enhancement. The app provides three core functionalities, each implemented in separate Python modules within the `utils` directory, and supports deployment via Docker.  
+**Local LaTeX Writing Assistant** is a Streamlit application designed to streamline LaTeX document creation and enhancement. The app provides three core functionalities, each implemented in separate Python modules within the `utils` directory, and supports deployment via Docker.
 
+## Features
 
-## Features  
-**1. BibTeX Conversion** (`utils/bibtex_converter.py`)  
-- Convert BibTeX entries to formatted citations  
-- Validate and clean BibTeX data  
-- Export citations in multiple styles  
+1. **BibTeX Conversion** (`utils/bibtex_converter.py`)
+   - Convert BibTeX entries to formatted citations
+   - Validate and clean BibTeX data
+   - Export citations in multiple styles
 
-**2. Markdown ↔ LaTeX Conversion** (`utils/md_latex_converter.py`)  
-- Convert Markdown documents to LaTeX syntax  
-- Translate LaTeX to Markdown for simplified editing  
-- Preserve mathematical expressions during conversion  
+2. **Markdown ↔ LaTeX Conversion** (`utils/md_latex_converter.py`)
+   - Convert Markdown documents to LaTeX syntax
+   - Translate LaTeX to Markdown for simplified editing
+   - Preserve mathematical expressions during conversion
 
-**3. Text Improvement** (`utils/text_improver.py`)  
-- Grammar and style suggestions for LaTeX content  
-- Vocabulary enhancement for academic writing  
-- Context-aware rephrasing of technical text  
+3. **Text Improvement** (`utils/text_improver.py`)
+   - Grammar and style suggestions for LaTeX content
+   - Vocabulary enhancement for academic writing
+   - Context-aware rephrasing of technical text
 
+## Installation
 
-## Installation - Method 1, Python and ollama required
+### Method 1: Python and Ollama
 
-### Install python if necessary
+#### Prerequisites
 
-More information here : [Python](https://www.python.org/about/gettingstarted/)
+- **Python**: Ensure Python is installed on your system. More information [here](https://www.python.org/about/gettingstarted/).
+- **Ollama**: Install Ollama following the instructions [here](https://ollama.com/).
 
-### Install ollama
+#### Steps
 
-More information here : [Ollama](https://ollama.com/)
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/faouzihakimi/Local_latex_assistant.git
+    cd latex-writing-assistant
+    ```
+
+2. **Install dependencies**:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. **Run the Streamlit app**:
+    ```sh
+    streamlit run app.py
+    ```
+
+4. **Access the app**:
+    Open your browser and go to [http://localhost:8501/](http://localhost:8501/).
+
+### Method 2: Docker and Docker Compose
+
+#### Prerequisites
+
+- **Docker**: Ensure Docker is installed on your system. More information [here](https://www.docker.com/get-started/).
+
+#### Steps
+
+1. **Clone the repository**:
+    ```sh
+    git clone https://github.com/faouzihakimi/Local_latex_assistant.git
+    cd latex-writing-assistant
+    ```
+
+2. **Build and run the Docker containers**:
+    ```sh
+    docker compose up --build  # First run
+    docker compose up  # Subsequent runs
+    ```
+
+3. **Pull the Ollama model**:
+    In another terminal, run:
+    ```sh
+    docker compose exec ollama ollama pull gemma3:1b
+    ```
+
+4. **Access the app**:
+    Open your browser and go to [http://localhost:8501/](http://localhost:8501/).
+
+## File Structure
 
 ```
-# Clone repository  
-git clone https://github.com/faouzihakimi/Local_latex_assistant.git  
-cd latex-writing-assistant
-
-# Install dependencies  
-pip install -r requirements.txt  
-```  
-
-
-
-## Installation - Method 2 with docker and docker-compose (docker required)
-
-### Install docker if necessary
-More information here : [Docker](https://www.docker.com/get-started/)
-
-Run the following command in a terminal :
-
+latex-writing-assistant/
+├── app.py               # Main Streamlit application
+├── requirements.txt     # Python dependencies
+├── utils/
+│   ├── __init__.py      # Package initialization
+│   ├── bibtex_converter.py
+│   ├── md_latex_converter.py
+│   └── text_improver.py
+├── LICENSE              # The MIT license
+└── README.md            # This documentation
 ```
-docker compose up --build #if it is the first run
-docker compose up #otherwise
-``` 
-In another terminal (the other one must stay open), run the following command:
 
-```
-docker compose exec ollama ollama pull gemma3:1b
-```
-Access to the app with this link: http://localhost:8501/
+## Contributing
 
-## Usage  
-Run the Streamlit app:  
-```
-streamlit run app.py  
-```  
-Access to the app with this link: http://localhost:8501/
+Contributions are welcome! Please open an issue or submit a pull request.
 
-## File Structure  
-```
-latex-writing-assistant/  
-├── app.py               # Main Streamlit application  
-├── requirements.txt     # Python dependencies  
-├── utils/  
-│   ├── __init__.py      # Package initialization  
-│   ├── bibtex_converter.py  
-│   ├── md_latex_converter.py  
-│   └── text_improver.py  
-├── LICENCE           # The MIT licence 
-└── README.md            # This documentation  
-```  
+## License
 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+This version includes clearer section headings, more detailed installation steps, and improved formatting for better readability.
 
 ## License  
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.  
