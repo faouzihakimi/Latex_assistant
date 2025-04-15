@@ -20,29 +20,33 @@
 - Context-aware rephrasing of technical text  
 
 
-## Installation  
+## Installation - Method 1, Python and ollama required
+
+### Install python if necessary
+
+More information here : [Python](https://www.python.org/about/gettingstarted/)
+
+### Install ollama
+
+More information here : [Ollama](https://ollama.com/)
+
 ```
 # Clone repository  
-git clone https://github.com/yourusername/latex-writing-assistant.git  
-cd latex-writing-assistant  
-
-# Install ollama
-More information here : [Ollama](https://ollama.com/)
+git clone https://github.com/faouzihakimi/Local_latex_assistant.git  
+cd latex-writing-assistant
 
 # Install dependencies  
 pip install -r requirements.txt  
 ```  
 
-## Usage  
-Run the Streamlit app:  
-```
-streamlit run app.py  
-```  
-Access to the app with this link: http://localhost:8501/
 
-## Installation with docker and docker-compose
 
-First run the following command in a terminal (docker must be installed):
+## Installation - Method 2 with docker and docker-compose (docker required)
+
+### Install docker if necessary
+More information here : [Docker](https://www.docker.com/get-started/)
+
+Run the following command in a terminal :
 
 ```
 docker compose up --build #if it is the first run
@@ -53,6 +57,13 @@ In another terminal (the other one must stay open), run the following command:
 ```
 docker compose exec ollama ollama pull gemma3:1b
 ```
+Access to the app with this link: http://localhost:8501/
+
+## Usage  
+Run the Streamlit app:  
+```
+streamlit run app.py  
+```  
 Access to the app with this link: http://localhost:8501/
 
 ## File Structure  
