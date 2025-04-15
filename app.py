@@ -10,9 +10,9 @@ from utils.text_improver import *
 
 
 # Initialize session state variables
-# if "ollama_initialized" not in st.session_state:
-#     ollama.pull('gemma3:1b')  
-#     st.session_state.ollama_initialized = True
+if "ollama_initialized" not in st.session_state:
+    ollama.pull('gemma3:1b')  
+    st.session_state.ollama_initialized = True
 
 # Streamlit UI
 st.set_page_config(
