@@ -1,13 +1,13 @@
 # Local LaTeX Writing Assistant 🖋️
 
-**Local LaTeX Writing Assistant** is a Streamlit application designed to streamline LaTeX document creation and enhancement. The app provides three core functionalities, each implemented in separate Python modules within the `utils` directory, and supports deployment via Docker.
+**Local LaTeX Writing Assistant** is a Streamlit application designed to streamline LaTeX writing. The app provides three core functionalities, each implemented in separate Python modules within the `utils` directory, and supports deployment via Docker.
 
 ## Features
 
 1. **BibTeX Conversion** (`utils/bibtex_converter.py`)
    - Convert BibTeX entries to formatted citations
    - Validate and clean BibTeX data
-   - Export citations in multiple styles
+   - Work with any citation styles
 
 2. **Markdown ↔ LaTeX Conversion** (`utils/md_latex_converter.py`)
    - Convert Markdown documents to LaTeX syntax
