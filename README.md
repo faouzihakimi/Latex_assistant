@@ -32,8 +32,8 @@
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/faouzihakimi/Local_latex_assistant.git
-    cd latex-writing-assistant
+    git clone https://github.com/faouzihakimi/local_latex_assistant.git
+    cd local_latex_assistant
     ```
 
 2. **Install dependencies**:
@@ -59,8 +59,8 @@
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/faouzihakimi/Local_latex_assistant.git
-    cd latex-writing-assistant
+    git clone https://github.com/faouzihakimi/local_latex_assistant.git
+    cd local_latex_assistant
     ```
 
 2. **Build and run the Docker containers**:
@@ -69,7 +69,7 @@
     docker compose up  # Subsequent runs
     ```
 
-3. **Pull the Ollama model**:
+3. **Pull the Ollama model (if error in the model loading)**:
     In another terminal, run:
     ```sh
     docker compose exec ollama ollama pull gemma3:1b
